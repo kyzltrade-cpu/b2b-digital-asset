@@ -1,38 +1,43 @@
 import React from 'react';
 
 export default function Home() {
-  const WALLET_ADDRESS = process.env.NEXT_PUBLIC_SOLANA_WALLET || 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v'; // USDC placeholder if not set
-  
+  const WALLET_ADDRESS = process.env.NEXT_PUBLIC_SOLANA_WALLET || 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v';
   const usdcCheckoutLink = `solana:${WALLET_ADDRESS}?amount=49&spl-token=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&label=B2B+Zendesk+n8n+Workflow`;
 
   return (
-    <main className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-8">
-      <div className="max-w-2xl w-full text-center space-y-8">
-        <h1 className="text-4xl font-extrabold tracking-tight">AI Operations Toolkit</h1>
-        <p className="text-xl text-slate-400">
-          Zendesk + n8n Workflow Automation Template
-        </p>
-        
-        <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 shadow-2xl">
-          <div className="aspect-video bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg mb-6 flex items-center justify-center shadow-inner">
-            <span className="text-xl font-bold text-white/90">n8n Workflow .json</span>
+    <main className="min-h-screen bg-[#f4f4f0] text-black font-mono p-4 md:p-12 lg:p-24 selection:bg-black selection:text-white">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start">
+        <div className="md:col-span-8 flex flex-col justify-start">
+          <h1 className="text-[12vw] md:text-[8vw] font-black leading-none uppercase tracking-tighter mix-blend-difference mb-8 md:mb-24">
+            STOP DOING SUPPORT MANUALLY.
+          </h1>
+          <div className="max-w-xl text-xl md:text-3xl font-bold uppercase leading-snug space-y-6">
+            <p>IT'S LATE. YOUR COMPETITORS ARE USING AI.</p>
+            <p>WE BUILT THE EXACT N8N + ZENDESK WORKFLOW YOU NEED.</p>
+            <p>BUY IT. IMPORT IT. FIRE YOUR TIER 1 SUPPORT.</p>
+          </div>
+        </div>
+
+        <div className="md:col-span-4 mt-12 md:mt-48 border-4 border-black p-6 md:p-8 bg-white shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+          <div className="uppercase font-bold text-sm tracking-widest border-b-2 border-black pb-4 mb-8">
+            DIGITAL ASSET: N8N_ZENDESK_TRIAGE.JSON
           </div>
           
-          <h2 className="text-2xl font-bold mb-2">Automate Your Customer Support</h2>
-          <p className="text-slate-400 mb-6 text-sm">Instantly deploy our internal Zendesk automation routing. Handles triage, sentiment analysis, and AI drafting.</p>
-          
-          <div className="flex items-center justify-between mb-8">
-            <span className="text-4xl font-black text-white">$49 <span className="text-lg text-slate-500 font-normal">USDC</span></span>
-            <span className="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">Digital Download</span>
+          <div className="mb-12">
+            <span className="text-6xl md:text-8xl font-black block leading-none">$49</span>
+            <span className="text-xl font-bold block mt-2">USDC ONLY</span>
           </div>
 
           <a 
             href={usdcCheckoutLink}
-            className="block w-full bg-blue-600 text-white text-center font-bold text-lg py-4 rounded-xl hover:bg-blue-500 transition-colors"
+            className="block w-full bg-black text-white text-center font-black text-xl md:text-2xl py-6 hover:bg-transparent hover:text-black border-4 border-transparent hover:border-black transition-all uppercase"
           >
-            Buy & Download via Solana Pay
+            PAY VIA SOLANA
           </a>
-          <p className="text-xs text-slate-500 mt-4">Includes the JSON template and setup guide. Delivered instantly.</p>
+          
+          <p className="text-sm font-bold mt-6 text-right uppercase">
+            INSTANT DELIVERY. NO REFUNDS.
+          </p>
         </div>
       </div>
     </main>
